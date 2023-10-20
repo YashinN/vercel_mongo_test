@@ -35,16 +35,31 @@ require("dotenv").config();
 
 const app = express();
 
-app.use(cors());
+const port = process.env.PORT || 6000;
 
-app.get("/", (req, res) => {
-  res.json("HEllloooooo@@@@");
+app.listen(PORT, () => {
+  console.log(`API listening on PORT ${PORT} `);
 });
 
-const port = process.env.PORT || 6000;
+app.get("/", (req, res) => {
+  res.send("Hey this is my API running 🥳");
+});
+
+app.get("/about", (req, res) => {
+  res.send("This is my about route..... ");
+});
+
+// Export the Express API
+module.exports = app;
 
 // app.listen(port, () => {
 //   console.log("listening");
+// });
+
+// app.use(cors());
+
+// app.get("/", (req, res) => {
+//   res.json("HEllloooooo@@@@");
 // });
 
 // mongoose
@@ -59,5 +74,3 @@ const port = process.env.PORT || 6000;
 //     console.log({ err });
 //     process.exit(1);
 //   });
-
-module.exports = app;
