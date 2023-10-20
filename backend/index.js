@@ -35,6 +35,16 @@ const mongoose = require("mongoose");
 const app = express();
 const PORT = 4000;
 
+mongoose
+  .connect(process.env.MONGO_URI)
+  .then(() => {
+    console.log("Mongodb connected");
+  })
+  .catch((err) => {
+    console.log({ err });
+    process.exit(1);
+  });
+
 app.listen(PORT, () => {
   console.log(`API listening on PORT ${PORT} `);
 });
