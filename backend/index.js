@@ -28,11 +28,11 @@
 
 // module.exports = app;
 
-import express from "express";
-import cors from "cors";
-import http from "http";
-import mongoose from "mongoose";
-import "dotenv/config";
+const express = require("express");
+const cors = require("cors");
+const http = require("http");
+const mongoose = require("mongoose");
+require("dotenv").config();
 
 const app = express();
 
@@ -42,7 +42,7 @@ app.get("/", (req, res) => {
   res.json("HEllloooooo@@@@");
 });
 
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 6000;
 
 const server = http.createServer(app);
 
