@@ -35,7 +35,7 @@ require("dotenv").config();
 
 const app = express();
 
-const port = process.env.PORT || 6000;
+const port = 4000;
 
 app.listen(port, () => {
   console.log(`API listening on PORT ${port} `);
