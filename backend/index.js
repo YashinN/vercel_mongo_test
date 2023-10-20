@@ -21,3 +21,5 @@ mongoose
     console.log(err);
     process.exit(1);
   });
+
+module.exports = app;
