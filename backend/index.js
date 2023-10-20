@@ -28,17 +28,14 @@
 
 // module.exports = app;
 
+// index.js
 const express = require("express");
-const cors = require("cors");
-const mongoose = require("mongoose");
-require("dotenv").config();
 
 const app = express();
+const PORT = 4000;
 
-const port = 4000;
-
-app.listen(port, () => {
-  console.log(`API listening on PORT ${port} `);
+app.listen(PORT, () => {
+  console.log(`API listening on PORT ${PORT} `);
 });
 
 app.get("/", (req, res) => {
@@ -51,6 +48,30 @@ app.get("/about", (req, res) => {
 
 // Export the Express API
 module.exports = app;
+
+// const express = require("express");
+// const cors = require("cors");
+// const mongoose = require("mongoose");
+// require("dotenv").config();
+
+// const app = express();
+
+// const port = 4000;
+
+// app.listen(port, () => {
+//   console.log(`API listening on PORT ${port} `);
+// });
+
+// app.get("/", (req, res) => {
+//   res.send("Hey this is my API running 🥳");
+// });
+
+// app.get("/about", (req, res) => {
+//   res.send("This is my about route..... ");
+// });
+
+// // Export the Express API
+// module.exports = app;
 
 // app.listen(port, () => {
 //   console.log("listening");
