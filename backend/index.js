@@ -43,9 +43,9 @@ app.get("/", (req, res) => {
 
 const port = process.env.PORT || 6000;
 
-app.listen(port, () => {
-  console.log("listening");
-});
+// app.listen(port, () => {
+//   console.log("listening");
+// });
 
 // mongoose
 //   .connect(process.env.MONGO_URI)
