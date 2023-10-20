@@ -31,9 +31,12 @@
 // index.js
 const express = require("express");
 const mongoose = require("mongoose");
+const cors = require("cors");
 
 const app = express();
 const PORT = 4000;
+
+app.use(cors());
 
 mongoose
   .connect(process.env.MONGO_URI)
