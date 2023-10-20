@@ -7,6 +7,8 @@ const cors = require("cors");
 const app = express();
 const PORT = 4000;
 
+const eventRoutes = require("./routes/eventRoutes");
+
 app.use(cors());
 app.use("/events", eventRoutes);
 
